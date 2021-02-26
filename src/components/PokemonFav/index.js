@@ -27,7 +27,7 @@ const PokemonFav = () => {
             exit={{ opacity: 0 }}
           >
             <img
-              style={{ height: "100px", width: "150px" }}
+              style={{ height: "100px", width: "180px" }}
               alt={"unloaded"}
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.id}.png`}
             ></img>

@@ -5,7 +5,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import { useHistory } from "react-router-dom";
 
@@ -97,7 +97,7 @@ export default function CustomizedMenus() {
         </StyledMenuItem>
         <StyledMenuItem onClick={() => send("favorites")}>
           <ListItemIcon>
-            <InboxIcon fontSize="small" />
+            <FavoriteBorderIcon />
           </ListItemIcon>
           <ListItemText primary="Favoritos" />
         </StyledMenuItem>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToPokemonThunk } from "../../store/modules/pokemon/thunks";
-import { CardDiv } from "./styles";
+import { CardDiv, DivOut } from "./styles";
 import { IconButton } from "@material-ui/core";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
@@ -41,19 +41,11 @@ const Pokemon = () => {
   return (
     <div style={{ marginTop: "2%" }}>
       <CustomizedMenus />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          marginTop: "5%",
-        }}
-      >
+      <DivOut>
         {listPokemon.map((item, i) => (
-          <CardDiv key={i}>
+          <CardDiv key={i} whileHover={{ scale: 1.1 }}>
             <img
-              style={{ height: "100px", width: "150px" }}
+              style={{ height: "100px", width: "200px" }}
               alt="unloaded"
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
                 index + i
@@ -69,7 +61,7 @@ const Pokemon = () => {
             </div>
           </CardDiv>
         ))}
-      </div>
+      </DivOut>
       <div style={{ width: "100%" }}>
         {counter > 1 && (
           <ButtonIcon onClick={handleSub}>

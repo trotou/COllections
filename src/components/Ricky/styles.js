@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { IconButton } from "@material-ui/core";
+import { motion } from "framer-motion";
 
-export const DivCard = styled.div`
+export const DivCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 200px;
   margin: 3%;
   background-color: whitesmoke;
   color: black;
@@ -13,13 +14,12 @@ export const DivCard = styled.div`
 `;
 
 export const DivBorder = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 3%;
+  font-size: 1.5rem;
 `;
 
 export const ButtonIcon = styled(IconButton)`

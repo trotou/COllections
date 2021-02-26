@@ -1,36 +1,35 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import Favorite from "../pages/Favorites";
-import Pokemon from "../pages/Pokemon";
-import PokemonFav from "../pages/PokemonFav";
-import Ricky from "../pages/Ricky";
-import RickyFav from "../pages/RickyFav";
-import InputSearch from "../pages/Search";
+import FavoritePage from "../pages/FavoritePage";
+import PokemonFavPage from "../pages/PokemonFavPage";
+import RickyFavPage from "../pages/RickyFavPage";
+import RickyPage from "../pages/RickyPage";
+import PokemonPage from "../pages/PokemonPage";
+import { AnimatePresence } from "framer-motion";
 
 const Routes = () => {
   return (
-    <Switch>
-      <Route exact path="/">
-        <Redirect to="/rickymorty" />
-      </Route>
-      <Route path="/pokemon">
-        <Pokemon />
-      </Route>
-      <Route path="/rickymorty">
-        <Ricky />
-      </Route>
-      <Route path="/favorites">
-        <Favorite />
-      </Route>
-      <Route path="/pokemonfav">
-        <PokemonFav />
-      </Route>
-      <Route path="/rickyfav">
-        <RickyFav />
-      </Route>
-      <Route path="/search">
-        <InputSearch />
-      </Route>
-    </Switch>
+    <AnimatePresence exitBeforeEnter>
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/rickymorty" />
+        </Route>
+        <Route path="/pokemon">
+          <PokemonPage />
+        </Route>
+        <Route path="/rickymorty">
+          <RickyPage />
+        </Route>
+        <Route path="/favorites">
+          <FavoritePage />
+        </Route>
+        <Route path="/pokemonfav">
+          <PokemonFavPage />
+        </Route>
+        <Route path="/rickyfav">
+          <RickyFavPage />
+        </Route>
+      </Switch>
+    </AnimatePresence>
   );
 };
 

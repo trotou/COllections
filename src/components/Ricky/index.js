@@ -36,17 +36,17 @@ const Ricky = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "2%" }}>
       <CustomizedMenus />
       <DivBorder>
         {listRicky.map((item, i) => (
-          <DivCard key={i}>
+          <DivCard key={i} whileHover={{ scale: 1.1 }}>
             <img
               src={item.image}
               alt="nada"
               style={{ width: "auto", height: "auto" }}
             />
-            <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <p>{item.name}</p>
               <IconButton onClick={() => dispatch(addToRickyThunk(item))}>
                 <FavoriteBorderIcon />

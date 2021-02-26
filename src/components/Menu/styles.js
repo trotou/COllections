@@ -66,7 +66,7 @@ export default function CustomizedMenus() {
         color="primary"
         onClick={handleClick}
       >
-        Open Menu
+        Menu
       </Button>
       <StyledMenu
         id="customized-menu"
